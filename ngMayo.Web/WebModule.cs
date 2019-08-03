@@ -1,9 +1,9 @@
-﻿using ngMayo.Web.Filters;
+﻿using ngNet.Web.Filters;
 using Ninject.Modules;
 using Ninject.Web.WebApi.FilterBindingSyntax;
 using System.Web.Http.Filters;
 
-namespace ngMayo.Web
+namespace ngNet.Web
 {
     public class WebModule : NinjectModule
     {

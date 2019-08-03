@@ -1,14 +1,13 @@
-﻿using ngMayo.Web.Helpers;
+﻿using ngNet.Web.Helpers;
 using System.Net.Http.Formatting;
 using System.Web.Http;
 
-namespace ngMayo.Web
+namespace ngNet.Web
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
 
             // Web API configuration and services
             config.Formatters.Clear();

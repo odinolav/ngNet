@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ngMayo.Logging;
-using ngMayo.Logging.Contracts;
-using ngMayo.Web.Helpers;
+using ngNet.Web.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,17 +11,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.Filters;
 
-namespace ngMayo.Web.Filters
+namespace ngNet.Web.Filters
 {
     public class ApiExceptionFilter : IExceptionFilter
     {
         public bool AllowMultiple { get { return true; } }
 
-        private readonly ILogStrategyFactory Logger;
-
-        public ApiExceptionFilter(ILogStrategyFactory logger)
+        public ApiExceptionFilter()
         {
-            Logger = logger;
         }
 
         public Task ExecuteExceptionFilterAsync(HttpActionExecutedContext actionExecutedContext, CancellationToken cancellationToken)
@@ -53,8 +48,6 @@ namespace ngMayo.Web.Filters
                     StatusCode = statusCode,
                     Content = httpContent,
                 };
-
-            Logger.GetStrategy(LogType.Error).Execute(actionExecutedContext.Exception.Message, actionExecutedContext.Exception.StackTrace);
 
             actionExecutedContext.Response = httpResponse;
 

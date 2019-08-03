@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Http;
 
-namespace ngMayo.Web.Controllers.API
+namespace ngNet.Web.Controllers.API
 {
     public class ValuesController : BaseApiController
     {
@@ -15,22 +15,16 @@ namespace ngMayo.Web.Controllers.API
         // GET api/values/5
         public string Get(int id)
         {
-            return "value";
+            return "value: " + id;
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
-        {
-        }
+        public void Post([FromBody]string value) { }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+        public void Put(int id, [FromBody]string value) { }
 
         // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
+        public void Delete(int id) { }
     }
 }

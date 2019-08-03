@@ -1,22 +1,17 @@
-﻿using ngMayo.Logging;
-using ngMayo.Logging.Contracts;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace ngMayo.Web.Controllers.Web
+namespace ngNet.Web.Controllers.Web
 {
     public class BaseController : Controller
     {
-        protected readonly ILogStrategyFactory LogFactory;
 
-        public BaseController(ILogStrategyFactory logFactory)
+        public BaseController()
         {
-            LogFactory = logFactory;
         }
 
         protected override void OnException(ExceptionContext filterContext)
         {
             base.OnException(filterContext);
-            LogFactory.GetStrategy(LogType.Error).Execute(filterContext.Exception.Message, filterContext.Exception.StackTrace);
             #if (RELEASE != true)
             if (filterContext.ExceptionHandled) return;
             #endif

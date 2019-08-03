@@ -1,12 +1,11 @@
-﻿using ngMayo.Logging.Contracts;
-using System;
+﻿using System;
 using System.Web.Mvc;
 
-namespace ngMayo.Web.Controllers.Web
+namespace ngNet.Web.Controllers.Web
 {
     public class HomeController : BaseController
     {
-        public HomeController(ILogStrategyFactory logger) : base(logger) { }
+        public HomeController() { }
 
         public ActionResult Index()
         {

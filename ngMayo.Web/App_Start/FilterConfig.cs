@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace ngMayo.Web
+namespace ngNet.Web
 {
     public class FilterConfig
     {

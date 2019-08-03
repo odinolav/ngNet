@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace ngMayo.Web
+namespace ngNet.Web
 {
     public class RouteConfig
     {

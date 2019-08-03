@@ -4,7 +4,7 @@ var tslib_1 = require("tslib");
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.name = 'MTDS Angular';
+        this.name = 'CURRENT_NAME';
     }
     AppComponent = tslib_1.__decorate([
         core_1.Component({

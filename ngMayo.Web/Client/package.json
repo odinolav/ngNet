@@ -1,5 +1,5 @@
 {
-  "name": "ngMayo.Web",
+  "name": "ngNet.Web",
   "version": "1.0.0",
   "description": "Angular 7 served by .NET 4.7.2 and Webpack",
   "scripts": {

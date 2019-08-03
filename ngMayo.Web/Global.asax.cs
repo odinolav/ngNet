@@ -1,12 +1,11 @@
-﻿using ngMayo.Logging;
-using Ninject;
+﻿using Ninject;
 using Ninject.Web.Common.WebHost;
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace ngMayo.Web
+namespace ngNet.Web
 {
     public class MvcWebApiApplication : NinjectHttpApplication
     {
@@ -17,7 +16,6 @@ namespace ngMayo.Web
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            LoggingConfig.RegisterLogging();
         }
 
         protected override IKernel CreateKernel()

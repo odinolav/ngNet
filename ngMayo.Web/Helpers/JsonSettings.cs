@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace ngMayo.Web.Helpers
+namespace ngNet.Web.Helpers
 {
     public class JsonSettings
     {
